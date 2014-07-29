@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Components</title>
+</head>
+<body>
+
+  <form>
+
+    <label for="textInput" class="text-input-wrapper">
+      <input type="text" id="textInput" placeholder="text">
+    </label>
+
+    <div class="radios-wrapper">
+      <div class="radio">
+        <label for="radioA">A</label>
+        <input type="radio" id="radioA">
+      </div>
+      <div class="radio">
+        <label for="radioB">B</label>
+        <input type="radio" id="radioB">
+      </div>
+    </div>
+
+    <div class="checkboxes-wrapper">
+      <div class="checkbox">
+        <label for="checkboxA">A</label>
+        <input type="checkbox" id="checkboxA"></input>
+      </div>
+      <div class="checkbox">
+        <label for="checkboxB">B</label>
+        <input type="checkbox" id="checkboxB"></input>
+      </div>
+      <div class="checkbox">
+        <label for="checkboxC">C</label>
+        <input type="checkbox" id="checkboxC"></input>
+      </div>
+    </div>
+
+    <div class="textarea-wrapper">
+      <span>Textarea</span>
+      <textarea rows="10" cols="50"></textarea>
+    </div>
+
+    <div class="selector">
+      <span>Choose</span>
+      <label class="selector-wrapper">
+        <select>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <em></em>
+      </label>
+    </div>
+
+    <label class="file-picker">
+      <span>Pick File</span>
+      <input type="file" multiple>
+    </label>
+
+    <button type="button"></buttton>
+
+    <input type="button" value="Button">
+    <input type="submit" value="Submit">
+
+  </form>
+
+</body>
+</html>
