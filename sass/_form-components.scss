@@ -12,12 +12,24 @@ textarea {
 }
 
 //--------------------------------------------------------------
-// input[type=text], input[type=email], input[type=search], input[type=tel], input[type=url]
+// input[type=text], input[type=email], input[type=tel], input[type=url]
 //--------------------------------------------------------------
 label.text-input-wrapper {
 
   input[type=text],
-  input[type=email] {
+  input[type=email],
+  input[type=tel],
+  input[type=url] {
+
+  }
+}
+
+//--------------------------------------------------------------
+// input[type=search]
+//--------------------------------------------------------------
+label.search-wrapper {
+
+  input[type=search] {
 
   }
 }
