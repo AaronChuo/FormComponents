@@ -3,7 +3,7 @@ FormComponents
 
 Initialize HTML form elements for keeping their behavior but custom styling.
 
-# Component List:
+## Component List:
 * Text Input
 * Email Input
 * Tel Input
@@ -19,7 +19,7 @@ Initialize HTML form elements for keeping their behavior but custom styling.
 * Switcher
 * Buttons
 
-# TODO:
+## TODO:
 * Mixins
 * Angular modular
 * Browsers compatibility testing
