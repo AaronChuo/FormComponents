@@ -9,8 +9,8 @@ Initialize HTML form elements for keeping their behavior but custom styling.
 * Tel Input
 * Url Input
 * Search
-* Radios
-* Checkboxes
+* Radios            (_radio.scss)
+* Checkboxes        (_checkbox.scss)
 * Textarea
 * Selector
 * File Picker
@@ -21,7 +21,7 @@ Initialize HTML form elements for keeping their behavior but custom styling.
 
 ## TODO:
 * Mixins
-* Angular modular
+* Modular for Angular
 * Browsers compatibility testing
 
 Author: Aaron Chuo (crazychuo@gmail.com)

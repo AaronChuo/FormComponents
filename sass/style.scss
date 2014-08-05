@@ -1,15 +1,23 @@
-// CSS normalize.css reset
-@import "normalize";
-
 // Compass
 @import "compass";
 
-// Variables
-@import "variables";
+// CSS normalize.css reset
+@import "basic/normalize";
 
-// Mixins
-@import "mixins";
+// Basic mixins
+@import "basic/mixins";
 
-// Form components
-@import "form-components";
+// Form Components
+@import "form-components/theme";		// Theme
+@import "form-components/all";			// All components
 
+html, body {
+	background: $lightColor;
+	font-size: $defFontSize;
+}
+
+section {
+	width: 70%;
+	min-width: 600px;
+	margin: 50px auto;
+}
