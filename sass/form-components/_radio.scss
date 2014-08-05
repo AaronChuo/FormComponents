@@ -18,11 +18,12 @@
       @include transition(all ease .3s);
       padding-right: 80px;
       &:before {
+        @include psuedo();
         @include transition(all ease .3s);
         @include border-radius(50%);
         @include box-shadow(1px 1px 1px $minorColor inset, 1px 1px 0 5px $basicColor inset);
         position: absolute;
-        top: 0;
+        top: 12px;
         right: 0;
         width: 20px;
         height: 20px;

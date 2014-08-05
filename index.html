@@ -11,12 +11,15 @@
 
     <form class="form-components">
 
+      <!-- 單行文字 -->
       <div class="group">
-        <label for="textInput">單行</label>
-        <input type="text" id="textInput" placeholder="text">
+        <label class="caption" for="textInput">單行</label>
+        <input type="text" id="textInput" placeholder="Text">
       </div>
 
+      <!-- 單選 -->
       <div class="group">
+        <label class="caption">單選</label>
         <div class="radio-wrapper">
           <input type="radio" id="radioA" name="radio">
           <label for="radioA">A</label>
@@ -26,14 +29,16 @@
           <label for="radioB">B</label>
         </div>
         <div class="radio-wrapper">
-          <input type="radio" id="radioC" name="radio">
+          <input type="radio" id="radioC" name="radio" checked>
           <label for="radioC">C</label>
         </div>
       </div>
 
+      <!-- 複選 -->
       <div class="group">
+        <label class="caption">複選</label>
         <div class="checkbox-wrapper">
-          <input type="checkbox" id="checkboxA"></input>
+          <input type="checkbox" id="checkboxA" checked></input>
           <label for="checkboxA">A</label>
         </div>
         <div class="checkbox-wrapper">
@@ -46,34 +51,42 @@
         </div>
       </div>
 
-      <div class="textarea-wrapper">
-        <span>Textarea</span>
-        <textarea rows="10" cols="50"></textarea>
-      </div>
-
-      <div class="selector">
-        <span>Choose</span>
+      <!-- 下拉選單 -->
+      <div class="selector group">
+        <label class="caption">下拉選單</label>
         <label class="selector-wrapper">
-          <select>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
+          <select name="selector">
+            <option disabled selected>Select</option>
+            <option value="">Option 1</option>
+            <option value="">Option 2</option>
+            <option value="">Option 3</option>
+            <option value="">Option 4</option>
+            <option value="">Option 5</option>
           </select>
           <em></em>
         </label>
       </div>
 
-      <label class="file-picker">
-        <span>Pick File</span>
-        <input type="file" multiple>
-      </label>
+      <!-- 多行文字 -->
+      <div class="textarea-wrapper group">
+        <label class="caption">多行</label>
+        <textarea rows="10" cols="50"></textarea>
+      </div>
 
-      <button type="button"></buttton>
+      <!-- 檔案選擇 -->
+      <div class="group">
+        <label class="file-picker">
+          <label class="caption">檔案</label>
+          <input type="file" multiple>
+        </label>
+      </div>
 
-      <input type="button" value="Button">
-      <input type="submit" value="Submit">
+      <!-- 按鈕 -->
+      <div class="group">
+        <button type="button"></buttton>
+        <input type="button" value="Button">
+        <input type="submit" value="Submit">
+      </div>
 
     </form>
 

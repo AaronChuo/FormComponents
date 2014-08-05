@@ -359,13 +359,6 @@ td {
   visibility: hidden;
 }
 
-/* psuedo elements initial */
-/* line 73, ../sass/basic/_normalize.scss */
-*:before, *:after {
-  content: '';
-  display: block;
-}
-
 @-webkit-keyframes checkbox {
   /* line 19, ../sass/form-components/_animation.scss */
   0% {
@@ -436,7 +429,8 @@ td {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   background: none;
   border: 0;
   outline: 0;
@@ -454,13 +448,20 @@ td {
 /* line 29, ../sass/form-components/_all.scss */
 .form-components .group {
   display: block;
-  padding: 10px 0;
+  margin: 10px 0;
 }
 /* line 32, ../sass/form-components/_all.scss */
 .form-components .group label {
   display: inline-block;
+  line-height: 46px;
+  vertical-align: top;
 }
-/* line 43, ../sass/form-components/_all.scss */
+/* line 37, ../sass/form-components/_all.scss */
+.form-components .group .caption {
+  padding: 0 10px;
+  cursor: default;
+}
+/* line 49, ../sass/form-components/_all.scss */
 .form-components input[type=text],
 .form-components input[type=email],
 .form-components input[type=tel],
@@ -499,6 +500,8 @@ td {
 }
 /* line 20, ../sass/form-components/_radio.scss */
 .form-components .radio-wrapper input[type=radio] ~ label:before {
+  content: "";
+  display: block;
   -moz-transition: all ease 0.3s;
   -webkit-transition: all ease;
   -webkit-transition-delay: 0.3s;
@@ -510,18 +513,18 @@ td {
   -webkit-box-shadow: 1px 1px 1px #aaaaaa inset, 1px 1px 0 5px white inset;
   box-shadow: 1px 1px 1px #aaaaaa inset, 1px 1px 0 5px white inset;
   position: absolute;
-  top: 0;
+  top: 12px;
   right: 0;
   width: 20px;
   height: 20px;
   border: 1px solid #eeeeee;
   background: white;
 }
-/* line 33, ../sass/form-components/_radio.scss */
+/* line 34, ../sass/form-components/_radio.scss */
 .form-components .radio-wrapper input[type=radio]:checked ~ label {
   color: #4ca9ff;
 }
-/* line 35, ../sass/form-components/_radio.scss */
+/* line 36, ../sass/form-components/_radio.scss */
 .form-components .radio-wrapper input[type=radio]:checked ~ label:before {
   background: #4ca9ff;
 }
@@ -549,6 +552,8 @@ td {
 }
 /* line 20, ../sass/form-components/_checkbox.scss */
 .form-components .checkbox-wrapper input[type=checkbox] ~ label:before {
+  content: "";
+  display: block;
   -moz-transition: all ease 0.3s;
   -webkit-transition: all ease;
   -webkit-transition-delay: 0.3s;
@@ -556,15 +561,14 @@ td {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: 1px 1px 1px #aaaaaa inset, 1px 1px 0 5px white inset;
-  -webkit-box-shadow: 1px 1px 1px #aaaaaa inset, 1px 1px 0 5px white inset;
-  box-shadow: 1px 1px 1px #aaaaaa inset, 1px 1px 0 5px white inset;
+  -moz-box-shadow: 1px 1px 1px #aaaaaa inset;
+  -webkit-box-shadow: 1px 1px 1px #aaaaaa inset;
+  box-shadow: 1px 1px 1px #aaaaaa inset;
   position: absolute;
-  top: 0;
+  top: 12px;
   right: 0;
   width: 20px;
   height: 20px;
-  border: 1px solid #eeeeee;
   background: white;
 }
 /* line 33, ../sass/form-components/_checkbox.scss */
@@ -573,6 +577,8 @@ td {
 }
 /* line 35, ../sass/form-components/_checkbox.scss */
 .form-components .checkbox-wrapper input[type=checkbox]:checked ~ label:after {
+  content: "";
+  display: block;
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -582,19 +588,84 @@ td {
   border-right: 2px solid #4ca9ff;
   border-bottom: 2px solid #4ca9ff;
   position: absolute;
-  top: 2px;
-  right: 6px;
+  top: 12px;
+  right: 5px;
   width: 7px;
   height: 15px;
 }
-/* line 111, ../sass/form-components/_all.scss */
+/* line 9, ../sass/form-components/_selector.scss */
+.form-components .selector span {
+  display: none;
+}
+/* line 12, ../sass/form-components/_selector.scss */
+.form-components .selector .selector-wrapper {
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease;
+  -webkit-transition-delay: 0.3s;
+  transition: all ease 0.3s;
+  -moz-box-shadow: -1px -1px 1px 0 #aaaaaa inset;
+  -webkit-box-shadow: -1px -1px 1px 0 #aaaaaa inset;
+  box-shadow: -1px -1px 1px 0 #aaaaaa inset;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 200px;
+  background: #eeeeee;
+}
+/* line 21, ../sass/form-components/_selector.scss */
+.form-components .selector .selector-wrapper select {
+  position: relative;
+  width: 120%;
+  height: 100%;
+  padding: 0 10px;
+  z-index: 99;
+  cursor: pointer;
+}
+/* line 29, ../sass/form-components/_selector.scss */
+.form-components .selector .selector-wrapper em {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  border-left: 1px solid #cccccc;
+  text-indent: 100%;
+}
+/* line 38, ../sass/form-components/_selector.scss */
+.form-components .selector .selector-wrapper em:before {
+  content: "";
+  display: block;
+  position: relative;
+  margin: 18px auto;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #aaaaaa;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+/* line 49, ../sass/form-components/_selector.scss */
+.form-components .selector .selector-wrapper:hover {
+  background: #f3f3f3;
+}
+/* line 51, ../sass/form-components/_selector.scss */
+.form-components .selector .selector-wrapper:hover em:before {
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease;
+  -webkit-transition-delay: 0.3s;
+  transition: all ease 0.3s;
+  border-top-color: #4ca9ff;
+}
+/* line 103, ../sass/form-components/_all.scss */
 .form-components .file-picker input[type=file] {
   outline: none;
 }
 
 /* line 14, ../sass/style.scss */
 html, body {
-  background: #eeeeee;
+  background: #ddd;
   font-size: 16px;
 }
 

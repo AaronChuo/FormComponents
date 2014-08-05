@@ -9,3 +9,9 @@
       color: $color;
     }
 }
+
+//Psuedo element initial
+@mixin psuedo($content: '', $display: block) {
+  content: $content;
+  display: $display;
+}
