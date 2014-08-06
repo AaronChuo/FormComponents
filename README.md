@@ -1,7 +1,6 @@
-FormComponents
-==============
+# FormComponents
 
-Initialize HTML form elements for keeping their behavior but custom styling.
+Implement HTML form elements without Javascript and frameworks for keeping native behaviors but customize style.
 
 ## Component List:
 * Text Input
@@ -19,9 +18,13 @@ Initialize HTML form elements for keeping their behavior but custom styling.
 * Switcher
 * Buttons
 
+## Class:
+* ::Basic
+* ::Fantasy (not yet)
+
 ## TODO:
 * Mixins
-* Angular modular
+* Angular directives
 * Browsers compatibility testing
 
 Author: Aaron Chuo (crazychuo@gmail.com)
